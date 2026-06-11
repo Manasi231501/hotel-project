@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Menu & Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Hotel Delight</h1></header>
+    
+    <section id="menu">
+        <h2>Snacks</h2>
+        <button onclick="addItem('Vada Pav', 20)">Vada Pav (₹20)</button>
+        <button onclick="addItem('Samosa', 15)">Samosa (₹15)</button>
+        <h2>Lunch</h2>
+        <button onclick="addItem('Special Thali', 150)">Special Thali (₹150)</button>
+    </section>
+
+    <section id="billing">
+        <h2 id="totalDisplay">Total: ₹0</h2>
+        <button onclick="payBill()">Pay Now</button>
+    </section>
+
+    <section id="booking">
+        <h2>Table Booking</h2>
+        <form onsubmit="event.preventDefault(); alert('Booking Confirmed!');">
+            <input type="text" placeholder="Name" required>
+            <input type="date" required>
+            <button type="submit">Book Table</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
